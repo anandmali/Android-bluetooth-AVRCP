@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/layoutItemHolder"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <TextView
+        android:id="@+id/txtDeviceName"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        tool:text="Device Name"
+        android:gravity="center_vertical"
+        />
+
+    <TextView
+        android:id="@+id/txtMacAddress"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        tool:text="108.0.3.0.110"
+        android:gravity="center_vertical"
+        />
+</LinearLayout>
