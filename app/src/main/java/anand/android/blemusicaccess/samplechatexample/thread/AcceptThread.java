@@ -10,9 +10,9 @@ import android.util.Log;
 
 import java.io.IOException;
 
-import anand.android.blemusicaccess.samplechatexample.BluetoothChatService;
+import anand.android.blemusicaccess.samplechatexample.BluetoothCommunicationService;
 
-import static anand.android.blemusicaccess.samplechatexample.BluetoothChatService.*;
+import static anand.android.blemusicaccess.samplechatexample.BluetoothCommunicationService.*;
 
 /**
  * This thread runs while listening for incoming connections. It behaves
@@ -25,7 +25,7 @@ public class AcceptThread extends Thread {
     private static final String TAG = AcceptThread.class.getSimpleName();
     private final BluetoothServerSocket mmServerSocket;
     private String mSocketType;
-    private BluetoothChatService bluetoothChatService = new BluetoothChatService();
+    private BluetoothCommunicationService bluetoothCommunicationService = new BluetoothCommunicationService();
 
     public AcceptThread(boolean secure) {
 
@@ -79,8 +79,8 @@ public class AcceptThread extends Thread {
                         case STATE_LISTEN:
                         case STATE_CONNECTING:
                             // Situation normal. Start the connected thread.
-                            BluetoothChatService bluetoothChatService = new BluetoothChatService();
-                            bluetoothChatService.connected(socket, socket.getRemoteDevice(),
+                            BluetoothCommunicationService bluetoothCommunicationService = new BluetoothCommunicationService();
+                            bluetoothCommunicationService.connected(socket, socket.getRemoteDevice(),
                                     mSocketType);
                             break;
                         case STATE_NONE:
@@ -97,7 +97,6 @@ public class AcceptThread extends Thread {
             }
         }
         Log.i(TAG, "END mAcceptThread, socket Type: " + mSocketType);
-
     }
 
     public void cancel() {

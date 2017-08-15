@@ -9,7 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.TextView;
 
-import anand.android.blemusicaccess.samplechatexample.BluetoothChatService;
+import anand.android.blemusicaccess.samplechatexample.BluetoothCommunicationService;
 import anand.android.blemusicaccess.utils.Constants;
 import anand.android.blemusicaccess.samplechatexample.DeviceModel;
 import anand.android.blemusicaccess.R;
@@ -24,7 +24,7 @@ import butterknife.OnClick;
 public class DeviceDetailsActivity extends AppCompatActivity {
 
     private DeviceModel deviceModel;
-    private BluetoothChatService bluetoothChatService;
+    private BluetoothCommunicationService bluetoothCommunicationService;
 
     /**
      * Local Bluetooth adapter
@@ -64,8 +64,8 @@ public class DeviceDetailsActivity extends AppCompatActivity {
         // Get the BluetoothDevice object
         BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(deviceModel.getMacAddress());
 
-        bluetoothChatService = new BluetoothChatService();
-        bluetoothChatService.connect(device, true);
+        bluetoothCommunicationService = new BluetoothCommunicationService();
+        bluetoothCommunicationService.connect(device, true);
 
     }
 }

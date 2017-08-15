@@ -54,7 +54,6 @@ public class DeviceListAdapter extends RecyclerView.Adapter<DeviceListAdapter.Vi
                 Intent intent = new Intent(context, DeviceDetailsActivity.class);
                 intent.putExtra(Constants.INTENT_DEVICE_DETAILS, deviceModel);
                 context.startActivity(intent);
-//                BluetoothChatService bluetoothChatService = new BluetoothChatService(context);
             }
         });
     }
@@ -64,12 +63,12 @@ public class DeviceListAdapter extends RecyclerView.Adapter<DeviceListAdapter.Vi
         return deviceList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.txtDeviceName) TextView txtDeviceName;
         @BindView(R.id.txtMacAddress) TextView txtMacAddress;
         @BindView(R.id.layoutItemHolder) LinearLayout layoutItemHolder;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
         }

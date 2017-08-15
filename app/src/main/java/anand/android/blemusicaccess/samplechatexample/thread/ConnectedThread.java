@@ -7,13 +7,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import static anand.android.blemusicaccess.samplechatexample.BluetoothChatService.STATE_CONNECTED;
-import static anand.android.blemusicaccess.samplechatexample.BluetoothChatService.mState;
-
-
-/**
- * Created by anandm on 05/03/17.
- */
+import static anand.android.blemusicaccess.samplechatexample.BluetoothCommunicationService.STATE_CONNECTED;
+import static anand.android.blemusicaccess.samplechatexample.BluetoothCommunicationService.mState;
 
 /**
  * This thread runs during a connection with a remote device.

@@ -15,10 +15,10 @@ import anand.android.blemusicaccess.samplechatexample.thread.*;
  * incoming connections, a thread for connecting with a device, and a
  * thread for performing data transmissions when connected.
  */
-public class BluetoothChatService {
+public class BluetoothCommunicationService {
 
     // Debugging
-    private static final String TAG = "BluetoothChatService";
+    private static final String TAG = "BluetoothCommunicationService";
 
     // Name for the SDP record when creating server socket
     public static final String NAME_SECURE = "BluetoothChatSecure";
@@ -47,7 +47,7 @@ public class BluetoothChatService {
     /**
      * Constructor. Prepares a new BluetoothChat session.
      */
-    public BluetoothChatService() {
+    public BluetoothCommunicationService() {
         mAdapter = BluetoothAdapter.getDefaultAdapter();
         mState = STATE_NONE;
         mNewState = mState;
@@ -194,7 +194,7 @@ public class BluetoothChatService {
      */
     private void connectionFailed() {
         // Start the service over to restart listening mode
-        BluetoothChatService.this.start();
+        BluetoothCommunicationService.this.start();
     }
 
     /**
@@ -202,6 +202,6 @@ public class BluetoothChatService {
      */
     private void connectionLost() {
         // Start the service over to restart listening mode
-        BluetoothChatService.this.start();
+        BluetoothCommunicationService.this.start();
     }
 }

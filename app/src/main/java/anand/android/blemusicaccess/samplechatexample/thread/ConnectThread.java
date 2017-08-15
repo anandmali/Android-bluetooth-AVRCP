@@ -7,13 +7,13 @@ import android.util.Log;
 
 import java.io.IOException;
 
-import static anand.android.blemusicaccess.samplechatexample.BluetoothChatService.MY_UUID_INSECURE;
-import static anand.android.blemusicaccess.samplechatexample.BluetoothChatService.MY_UUID_SECURE;
-import static anand.android.blemusicaccess.samplechatexample.BluetoothChatService.STATE_CONNECTING;
-import static anand.android.blemusicaccess.samplechatexample.BluetoothChatService.connected;
-import static anand.android.blemusicaccess.samplechatexample.BluetoothChatService.mAdapter;
-import static anand.android.blemusicaccess.samplechatexample.BluetoothChatService.mConnectThread;
-import static anand.android.blemusicaccess.samplechatexample.BluetoothChatService.mState;
+import static anand.android.blemusicaccess.samplechatexample.BluetoothCommunicationService.MY_UUID_INSECURE;
+import static anand.android.blemusicaccess.samplechatexample.BluetoothCommunicationService.MY_UUID_SECURE;
+import static anand.android.blemusicaccess.samplechatexample.BluetoothCommunicationService.STATE_CONNECTING;
+import static anand.android.blemusicaccess.samplechatexample.BluetoothCommunicationService.connected;
+import static anand.android.blemusicaccess.samplechatexample.BluetoothCommunicationService.mAdapter;
+import static anand.android.blemusicaccess.samplechatexample.BluetoothCommunicationService.mConnectThread;
+import static anand.android.blemusicaccess.samplechatexample.BluetoothCommunicationService.mState;
 
 /**
  * Created by anandm on 05/03/17.
